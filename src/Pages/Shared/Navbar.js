@@ -15,6 +15,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/tools">Tools</Link></li>
         <li><Link to="/purchase">Purchase</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
@@ -24,7 +25,7 @@ const Navbar = () => {
         <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">

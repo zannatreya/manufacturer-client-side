@@ -10,6 +10,7 @@ import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
+import Tools from './Pages/Home/Tools';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/tools" element={<Tools />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="purchase/:id" element={<Purchase />} />
         <Route path="/login" element={<Login />} />

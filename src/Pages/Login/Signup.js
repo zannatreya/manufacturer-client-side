@@ -3,6 +3,7 @@ import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
+import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import useToken from '../hooks/useToken';
 
@@ -150,7 +151,7 @@ const Signup = () => {
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline">CONTINUE WITH GOOGLE</button>
+                        className="btn btn-outline"><FcGoogle className='text-xl mr-2' />CONTINUE WITH GOOGLE</button>
 
                 </div>
             </div>
