@@ -8,6 +8,8 @@ import Home from './Pages/Home/Home';
 import Purchase from './Pages/Home/Purchase';
 import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
+import Login from './Pages/Login/Login';
+import Signup from './Pages/Login/Signup';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="purchase/:id" element={<Purchase />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
 
       </Routes>
