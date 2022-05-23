@@ -11,7 +11,7 @@ const Tools = () => {
     }, [])
     return (
         <div>
-            <div className='text-center py-28'>
+            <div className='text-center py-16'>
                 <h3 className='text-primary font-bold text-xl  uppercase'>Our Services</h3>
                 <h2 className='text-4xl'>Services we provide</h2>
             </div>
@@ -23,6 +23,7 @@ const Tools = () => {
                     ></Tool>)
                 }
             </div>
+
         </div>
     );
 };

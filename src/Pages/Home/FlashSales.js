@@ -14,7 +14,6 @@ const FlashSales = () => {
                         <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
                             <span className="countdown font-mono text-5xl">
                                 <span>00</span>
-                                {/* <span style="--value:15;"></span> */}
                             </span>
                             days
                         </div>
