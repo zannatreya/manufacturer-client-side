@@ -1,11 +1,16 @@
 import React from 'react';
+import { navigate, useNavigate } from 'react-router-dom';
+import './Tool.css';
 
 const Tool = ({ tool }) => {
-    const { id, name, img, description, price, minimumOrderQuantity, availableQuantity } = tool;
-
+    const { _id, name, img, description, price, minimumOrderQuantity, availableQuantity } = tool;
+    const navigate = useNavigate();
+    const navigateToPurchaseDetail = (id) => {
+        navigate(`/purchase/${id}`);
+    }
     return (
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
                 <img src={tool.img} alt="" className="rounded-xl" />
             </figure>
@@ -15,6 +20,8 @@ const Tool = ({ tool }) => {
                 <p>{tool.description}</p>
                 <p><span className='font-medium'>Min-Order: </span>{tool.minimumOrderQuantity}</p>
                 <p><span className='font-medium'>Available-Quantity: </span>{tool.availableQuantity}</p>
+                <button className='btn-design' onClick={() => navigateToPurchaseDetail(tool._id)}>Purchase</button>
+
             </div>
 
         </div>

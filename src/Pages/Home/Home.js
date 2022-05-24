@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { navigate, useNavigate } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 import PrimaryButton from '../Shared/PrimaryButton';
 import Banner from './Banner';
@@ -14,7 +14,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('services.json')
+        fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
@@ -35,13 +35,13 @@ const Home = () => {
                     }
                 </div>
                 <div className='text-center py-8'>
-                    <PrimaryButton onClick={() => navigate("/tools")}>See All Tools</PrimaryButton>
+                    <button className='btn btn-design' onClick={() => navigate("/tools")}>See All Tools</button>
 
                 </div>
 
             </div>
 
-            <FlashSales></FlashSales>
+            {/* <FlashSales></FlashSales> */}
             <BusinessSummary></BusinessSummary>
             <Testimonials></Testimonials>
             <Footer></Footer>
