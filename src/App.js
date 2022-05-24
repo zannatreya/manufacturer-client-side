@@ -11,9 +11,11 @@ import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
 import Tools from './Pages/Home/Tools';
 import RequireAuth from './Pages/Login/RequireAuth';
-import Purchase from './Pages/Purchase/Purchase';
 import PurchaseDetails from './Pages/Purchase/PurchaseDetails';
-import MyProfile from './Pages/MyProfile';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyPortfolio from './Pages/MyPortfolio';
 
 function App() {
   return (
@@ -24,13 +26,17 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/myprofile" element={<MyProfile />} />
+        {/* <Route path="/myprofile" element={<MyProfile />} /> */}
+        <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="/purchase/:purchaseId" element={
           <RequireAuth>
             <PurchaseDetails />
           </RequireAuth>
         }></Route>
-        <Route path="purchase/:id" element={<Purchase />} />
+        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
+          <Route index element={<MyOrders />}></Route>
+          <Route path="review" element={<AddReview />}> </Route>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
