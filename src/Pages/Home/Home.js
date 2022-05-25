@@ -4,6 +4,7 @@ import Footer from '../Shared/Footer';
 import PrimaryButton from '../Shared/PrimaryButton';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
+import Contact from './Contact';
 import FlashSales from './FlashSales';
 import Testimonials from './Testimonials';
 import Tool from './Tool';
@@ -44,6 +45,7 @@ const Home = () => {
             {/* <FlashSales></FlashSales> */}
             <BusinessSummary></BusinessSummary>
             <Testimonials></Testimonials>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
