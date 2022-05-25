@@ -17,6 +17,7 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyPortfolio from './Pages/MyPortfolio';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 function App() {
   return (
@@ -37,8 +38,7 @@ function App() {
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route index element={<MyOrders />}></Route>
           <Route path="review" element={<AddReview />}> </Route>
-          {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}> </Route> */}
-          <Route path="users" element={<Users></Users>}> </Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}> </Route>
 
         </Route>
         <Route path="/login" element={<Login />} />

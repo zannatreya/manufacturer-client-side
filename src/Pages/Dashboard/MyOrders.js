@@ -42,6 +42,7 @@ const MyOrders = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Product Name</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Payment</th>
@@ -53,6 +54,7 @@ const MyOrders = () => {
                                 <th>{index + 1}</th>
                                 <td>{a.userName}</td>
                                 <td>{a.email}</td>
+                                <td>{a.name}</td>
                                 <td>{a.quantity}</td>
                                 <td>{a.price}</td>
                                 {/* <td>
