@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import useToken from '../hooks/useToken';
+import useToken from '../../hooks/useToken';
 
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
 
     let signInError;
@@ -30,11 +30,11 @@ const Login = () => {
         navigate(from, { replace: true });
 
     }
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [token, from, navigate])
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>

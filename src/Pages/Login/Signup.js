@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 // import useToken from '../hooks/useToken';
 
 
@@ -21,7 +22,7 @@ const Signup = () => {
 
     let signInError;
 
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
     const navigate = useNavigate();
     // const location = useLocation();
@@ -42,10 +43,10 @@ const Signup = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
 
-    // if (token) {
-    //     navigate('/appointment');
+    if (token) {
+        navigate('/purchase');
 
-    // }
+    }
 
 
     const onSubmit = async data => {
