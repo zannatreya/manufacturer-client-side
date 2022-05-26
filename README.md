@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Anonymous
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Anonymous client-side github link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-zannatreya).
+
+This project was bootstrapped with [Anonymous server-side github link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-zannatreya).
+
+This project was bootstrapped with [Anonymous live site link](https://manufacturer-website-57646.web.app/).
+
+## Features
+
+- In this project,there are few nav link.Home,dashboard,Blogs,Login,Blogs,MyPortfolio,Purchase.
+- In the home page,I create first section with image carousel and article,second section with Computer parts details and third section with flashsales,fourth section with business summary,fifth section with customer review,fifth section with contact and last footer.
+- In dashboard,there are user and admin also created and nested route used in it.
+- In blogs page,there are 5 ques and answer.
+- I also use react route and tailwind,daisyui.
 
 ## Available Scripts
 

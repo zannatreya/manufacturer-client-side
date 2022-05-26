@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../hooks/useToken';
+import { toast } from 'react-toastify';
+import { sendPasswordResetEmail } from 'firebase/auth';
 
 
 const Login = () => {
@@ -17,6 +19,9 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const emailRef = useRef('');
 
     const [token] = useToken(user || gUser);
 
@@ -50,6 +55,17 @@ const Login = () => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password);
     };
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('Please Enter your email address');
+        }
+    }
 
     return (
         <div className='flex h-screen justify-center items-center'>
@@ -123,6 +139,8 @@ const Login = () => {
                         <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
                     <p><small>New to Anonymous  <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    <p>Forget Password? <button className='btn btn-link text-primary bg-light pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}

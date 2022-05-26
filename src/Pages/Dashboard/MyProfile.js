@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
 const MyProfile = () => {
     const { register, formState: { errors } } = useForm();
-    // const { data: products, isLoading } = useQuery('products', () => fetch("http://localhost:5000/user").then(res => res.json()))
 
 
 
