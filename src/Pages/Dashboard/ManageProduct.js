@@ -30,7 +30,6 @@ const ManageProduct = () => {
                             <th></th>
                             <th>Avatar</th>
                             <th>Name</th>
-                            <th>Quantity</th>
                             <th>Action</th>
                         </tr>
                     </thead>

@@ -7,12 +7,12 @@ import './Blogs.css';
 const Blogs = () => {
     return (
         <div>
-            <h3 className='text-center m-12 text-3xl font-bold uppercase'>Question & Answer<MdQuestionAnswer className='answer' /></h3>
+            <h3 className='text-center m-12 text-3xl font-bold uppercase'>Question & Answer</h3>
 
 
             <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    How will you improve the performance of a React Application<BsQuestionOctagonFill className='question' /></div>
+                    How will you improve the performance of a React Application</div>
                 <div class="collapse-content">
                     <p> Optimizing performance in a React application:
                         Keeping component state local where necessary
@@ -25,7 +25,7 @@ const Blogs = () => {
 
             <div tabindex="1" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    What are the different ways to manage a state in a React application<BsQuestionOctagonFill className='question' />
+                    What are the different ways to manage a state in a React application
                 </div>
                 <div class="collapse-content">
                     <p>There are four main types of state you need to properly manage in your React apps: </p>
@@ -51,7 +51,11 @@ const Blogs = () => {
                 <div class="collapse-title text-xl font-medium">
                     You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?                </div>
                 <div class="collapse-content">
-                    <p> </p>
+                    <p> To find the product of elements of an array.
+                        create an empty variable. ( product)
+                        Initialize it with 1.
+                        In a loop traverse through each element (or get each element from user) multiply each element to product.
+                        Print the product.</p>
                 </div>
             </div>
 
