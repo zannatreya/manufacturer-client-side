@@ -67,7 +67,7 @@ const BusinessSummary = () => {
                             <p className='text-xl font-semibold'>Don't hesitate to contact us</p>
                         </div>
                         <div className="card-actions justify-end">
-                            <PrimaryButton className="btn btn-primary">Request for queto</PrimaryButton>
+                            <button className="btn btn-design">Request for queto</button>
                             <button onClick={() => navigate('/contact')} className="btn btn-info-content">Contact Us</button>
                         </div>
                     </div>
