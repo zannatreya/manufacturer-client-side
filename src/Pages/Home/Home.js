@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { navigate, useNavigate } from 'react-router-dom';
+import ShowReviews from '../Dashboard/ShowReviews';
 import Footer from '../Shared/Footer';
 import PrimaryButton from '../Shared/PrimaryButton';
 import Banner from './Banner';
@@ -45,6 +46,7 @@ const Home = () => {
             {/* <FlashSales></FlashSales> */}
             <BusinessSummary></BusinessSummary>
             <Testimonials></Testimonials>
+            {/* <ShowReviews></ShowReviews> */}
             <Contact></Contact>
             <Footer></Footer>
         </div>
