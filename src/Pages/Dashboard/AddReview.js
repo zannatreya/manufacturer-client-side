@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddReview = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: reviews, isLoading } = useQuery('products', () => fetch('http://localhost:5000/product').then(res => res.json()))
+    const { data: reviews, isLoading } = useQuery('products', () => fetch('https://floating-beyond-11592.herokuapp.com/product').then(res => res.json()))
 
 
     const onSubmit = async data => {
@@ -20,7 +20,7 @@ const AddReview = () => {
             review: data.review
 
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://floating-beyond-11592.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

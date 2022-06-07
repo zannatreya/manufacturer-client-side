@@ -14,7 +14,7 @@ const CheckoutForm = ({ product }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://floating-beyond-11592.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -85,7 +85,7 @@ const CheckoutForm = ({ product }) => {
                 product: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/purchase/${_id}`, {
+            fetch(`https://floating-beyond-11592.herokuapp.com/purchase/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

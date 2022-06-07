@@ -18,7 +18,7 @@ const PurchaseDetails = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${purchaseId}`
+        const url = `https://floating-beyond-11592.herokuapp.com/product/${purchaseId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setTools(data))
@@ -38,7 +38,7 @@ const PurchaseDetails = () => {
             quantity: event.target.quantity.value,
         }
         console.log(purchase);
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://floating-beyond-11592.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

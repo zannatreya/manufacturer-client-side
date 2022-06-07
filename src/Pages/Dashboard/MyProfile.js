@@ -21,7 +21,7 @@ const MyProfile = () => {
             education: event.target.education.value,
         }
         console.log(info);
-        fetch('http://localhost:5000/myprofile', {
+        fetch('https://floating-beyond-11592.herokuapp.com/myprofile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

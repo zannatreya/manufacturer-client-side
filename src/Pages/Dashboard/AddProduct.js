@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: products, isLoading } = useQuery('products', () => fetch('http://localhost:5000/product').then(res => res.json()))
+    const { data: products, isLoading } = useQuery('products', () => fetch('https://floating-beyond-11592.herokuapp.com/product').then(res => res.json()))
 
     const imageStorageKey = '3f11ccaa30b2e9b97d8f1ccb0370d98f';
 
@@ -32,7 +32,7 @@ const AddProduct = () => {
                         productsName: data.productsName,
                         image: image
                     }
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://floating-beyond-11592.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
